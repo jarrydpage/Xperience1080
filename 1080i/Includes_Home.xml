@@ -952,6 +952,21 @@
                             <onright>503</onright>
                             <onclick condition="System.HasAddon(service.skin.widgets)">$INFO[Container(5022).ListItem.Property(Play)]</onclick>
                         </control>
+						<control type="label">
+                            <posx>0</posx>
+                            <posy>574</posy>
+                            <width>572</width>
+                            <height>25</height>
+                            <font>Font-Condensed-S20-B</font>
+                            <shadowcolor>11000000</shadowcolor>
+                            <textcolor>77white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textoffsetx>5</textoffsetx>
+                            <label>[UPPERCASE]$LOCALIZE[41450][/UPPERCASE]</label>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(502).HasFocus">Conditional</animation>
+                            <visible>Skin.HasSetting(HideHomeSpotlight)</visible>
+                        </control>
                         <control type="label">
                             <posx>0</posx>
                             <posy>574</posy>
@@ -965,6 +980,7 @@
                             <textoffsetx>5</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[41550][/UPPERCASE]</label>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(502).HasFocus">Conditional</animation>
+                            <visible>!Skin.HasSetting(HideHomeSpotlight)</visible>
                         </control>
                         <control type="image">
                             <posx>-5</posx>
@@ -1021,11 +1037,27 @@
                             <content>
                                 <item id="1">
                                     <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentMovie.1.Art(fanart))]</icon>
+                                    <label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentMovie.1.Rating)]</label2>
+                                    <property name="Play">$INFO[Window.Property(RecentMovie.1.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentMovie.1.File)) + Skin.HasSetting(HideHomeSpotlight)</visible>
+                                </item>
+                                <item id="1">
+                                    <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RandomMovie.1.Art(fanart))]</icon>
                                     <label>$INFO[Window.Property(RandomMovie.1.Title)]</label>
                                     <label2>$INFO[Window.Property(RandomMovie.1.Rating)]</label2>
                                     <property name="Play">$INFO[Window.Property(RandomMovie.1.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RandomMovie.1.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !Skin.HasSetting(HideHomeSpotlight)</visible>
+                                </item>
+                                <item id="2">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentMovie.2.Art(fanart))]</icon>
+                                    <label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentMovie.1.Rating)]</label2>
+                                    <property name="Play">$INFO[Window.Property(RecentMovie.2.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentMovie.2.File)) + Skin.HasSetting(HideHomeSpotlight)</visible>
                                 </item>
                                 <item id="2">
                                     <onclick>-</onclick>
@@ -1033,7 +1065,15 @@
                                     <label>$INFO[Window.Property(RandomEpisode.1.Season),,x]$INFO[Window.Property(RandomEpisode.1.Episode),, ]$INFO[Window.Property(RandomEpisode.1.Title)]</label>
                                     <label2>$INFO[Window.Property(RandomEpisode.1.Rating)]</label2>
                                     <property name="Play">$INFO[Window.Property(RandomEpisode.1.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RandomEpisode.1.File)) + !Skin.HasSetting(HideHomeSpotlight)</visible>
+                                </item>
+                                <item id="3">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentMovie.3.Art(fanart))]</icon>
+                                    <label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentMovie.3.Rating)]</label2>
+                                    <property name="Play">$INFO[Window.Property(RecentMovie.3.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentMovie.3.File)) + Skin.HasSetting(HideHomeSpotlight)</visible>
                                 </item>
                                 <item id="3">
                                     <onclick>-</onclick>
@@ -1041,7 +1081,15 @@
                                     <label>$INFO[Window.Property(RandomMovie.2.Title)]</label>
                                     <label2>$INFO[Window.Property(RandomMovie.2.Rating)]</label2>
                                     <property name="Play">$INFO[Window.Property(RandomMovie.2.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RandomMovie.2.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RandomMovie.2.File)) + !Skin.HasSetting(HideHomeSpotlight)</visible>
+                                </item>
+                                <item id="4">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentMovie.4.Art(fanart))]</icon>
+                                    <label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentMovie.4.Rating)]</label2>
+                                    <property name="Play">$INFO[Window.Property(RecentMovie.4.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentMovie.4.File)) + Skin.HasSetting(HideHomeSpotlight)</visible>
                                 </item>
                                 <item id="4">
                                     <onclick>-</onclick>
@@ -1049,7 +1097,15 @@
                                     <label>$INFO[Window.Property(RandomEpisode.2.Season),,x]$INFO[Window.Property(RandomEpisode.2.Episode),, ]$INFO[Window.Property(RandomEpisode.2.Title)]</label>
                                     <label2>$INFO[Window.Property(RandomEpisode.2.Rating)]</label2>
                                     <property name="Play">$INFO[Window.Property(RandomEpisode.2.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RandomEpisode.2.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RandomEpisode.2.File)) + !Skin.HasSetting(HideHomeSpotlight)</visible>
+                                </item>
+                                <item id="5">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentMovie.5.Art(fanart))]</icon>
+                                    <label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentMovie.5.Rating)]</label2>
+                                    <property name="Play">$INFO[Window.Property(RecentMovie.5.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentMovie.5.File)) + Skin.HasSetting(HideHomeSpotlight)</visible>
                                 </item>
                                 <item id="5">
                                     <onclick>-</onclick>
@@ -1057,7 +1113,15 @@
                                     <label>$INFO[Window.Property(RandomMovie.3.Title)]</label>
                                     <label2>$INFO[Window.Property(RandomMovie.3.Rating)]</label2>
                                     <property name="Play">$INFO[Window.Property(RandomMovie.3.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RandomMovie.3.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RandomMovie.3.File)) + !Skin.HasSetting(HideHomeSpotlight)</visible>
+                                </item>
+                                <item id="6">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentMovie.6.Art(fanart))]</icon>
+                                    <label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentMovie.6.Rating)]</label2>
+                                    <property name="Play">$INFO[Window.Property(RecentMovie.6.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentMovie.6.File)) + Skin.HasSetting(HideHomeSpotlight)</visible>
                                 </item>
                                 <item id="6">
                                     <onclick>-</onclick>
@@ -1065,7 +1129,7 @@
                                     <label>$INFO[Window.Property(RandomEpisode.3.Season),,x]$INFO[Window.Property(RandomEpisode.3.Episode),, ]$INFO[Window.Property(RandomEpisode.3.Title)]</label>
                                     <label2>$INFO[Window.Property(RandomEpisode.3.Rating)]</label2>
                                     <property name="Play">$INFO[Window.Property(RandomEpisode.3.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RandomEpisode.3.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RandomEpisode.3.File)) + !Skin.HasSetting(HideHomeSpotlight)</visible>
                                 </item>
                             </content>
                         </control>
@@ -1157,10 +1221,10 @@
                             <height>572</height>
                             <onfocus>CancelAlarm(HomeTileMove,true)</onfocus>
                             <onfocus>CancelAlarm(HomeTileMoveThree,true)</onfocus>
-                            <onup>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onup>
+                            <onup>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:07,silent,loop)</onup>
                             <onup>525</onup>
                             <ondown>Control.Move(5032,1)</ondown>
-                            <onleft>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
+                            <onleft>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:07,silent,loop)</onleft>
                             <onleft>502</onleft>
                             <onright>CancelAlarm(HomeTileMoveTwo,true)</onright>
                             <onright condition="!Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onright>
@@ -1170,7 +1234,8 @@
                             <onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">301</onright>
                             <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">401</onright>
                             <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
-                            <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)">701</onright>
+                            <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
+                            <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
                             <onright>Control.Move(20,1)</onright>
                             <onclick condition="System.HasAddon(service.skin.widgets)">$INFO[Container(5032).ListItem.Property(Play)]</onclick>
                         </control>
@@ -1185,8 +1250,24 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
+                            <label>[UPPERCASE]$LOCALIZE[41451][/UPPERCASE]</label>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(503).HasFocus">Conditional</animation>
+                            <visible>Skin.HasSetting(HideHomeOngoing)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>574</posy>
+                            <width>382</width>
+                            <height>25</height>
+                            <font>Font-Condensed-S20-B</font>
+                            <shadowcolor>11000000</shadowcolor>
+                            <textcolor>77white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textoffsetx>5</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[41551][/UPPERCASE]</label>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(503).HasFocus">Conditional</animation>
+                            <visible>!Skin.HasSetting(HideHomeOngoing)</visible>
                         </control>
                         <control type="image">
                             <posx>-5</posx>
@@ -1243,45 +1324,87 @@
                             <content>
                                 <item id="1">
                                     <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</icon>
+                                    <label>$INFO[Window.Property(RecentEpisode.1.Season),,x]$INFO[Window.Property(RecentEpisode.1.Episode),, ]$INFO[Window.Property(RecentEpisode.1.Title)]</label>
+                                    <property name="Play">$INFO[Window.Property(RecentEpisode.1.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentEpisode.1.File)) + Skin.HasSetting(HideHomeOngoing)</visible>
+                                </item>
+                                <item id="1">
+                                    <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
                                     <label>$INFO[Window.Property(RecommendedEpisode.1.Season),,x]$INFO[Window.Property(RecommendedEpisode.1.Episode),, ]$INFO[Window.Property(RecommendedEpisode.1.Title)]</label>
                                     <property name="Play">$INFO[Window.Property(RecommendedEpisode.1.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File)) + !Skin.HasSetting(HideHomeOngoing)</visible>
+                                </item>
+                                <item id="2">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</icon>
+                                    <label>$INFO[Window.Property(RecentEpisode.2.Season),,x]$INFO[Window.Property(RecentEpisode.2.Episode),, ]$INFO[Window.Property(RecentEpisode.2.Title)]</label>
+                                    <property name="Play">$INFO[Window.Property(RecentEpisode.2.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentEpisode.2.File)) + Skin.HasSetting(HideHomeOngoing)</visible>
                                 </item>
                                 <item id="2">
                                     <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
                                     <label>$INFO[Window.Property(RecommendedEpisode.2.Season),,x]$INFO[Window.Property(RecommendedEpisode.2.Episode),, ]$INFO[Window.Property(RecommendedEpisode.2.Title)]</label>
                                     <property name="Play">$INFO[Window.Property(RecommendedEpisode.2.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.2.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.2.File)) + !Skin.HasSetting(HideHomeOngoing)</visible>
+                                </item>
+                                <item id="3">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</icon>
+                                    <label>$INFO[Window.Property(RecentEpisode.3.Season),,x]$INFO[Window.Property(RecentEpisode.3.Episode),, ]$INFO[Window.Property(RecentEpisode.3.Title)]</label>
+                                    <property name="Play">$INFO[Window.Property(RecentEpisode.3.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentEpisode.3.File)) + Skin.HasSetting(HideHomeOngoing)</visible>
                                 </item>
                                 <item id="3">
                                     <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
                                     <label>$INFO[Window.Property(RecommendedEpisode.3.Season),,x]$INFO[Window.Property(RecommendedEpisode.3.Episode),, ]$INFO[Window.Property(RecommendedEpisode.3.Title)]</label>
                                     <property name="Play">$INFO[Window.Property(RecommendedEpisode.3.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.3.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.3.File)) + !Skin.HasSetting(HideHomeOngoing)</visible>
+                                </item>
+                                <item id="4">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</icon>
+                                    <label>$INFO[Window.Property(RecentEpisode.4.Season),,x]$INFO[Window.Property(RecentEpisode.4.Episode),, ]$INFO[Window.Property(RecentEpisode.4.Title)]</label>
+                                    <property name="Play">$INFO[Window.Property(RecentEpisode.4.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentEpisode.4.File)) + Skin.HasSetting(HideHomeOngoing)</visible>
                                 </item>
                                 <item id="4">
                                     <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
                                     <label>$INFO[Window.Property(RecommendedEpisode.4.Season),,x]$INFO[Window.Property(RecommendedEpisode.4.Episode),, ]$INFO[Window.Property(RecommendedEpisode.4.Title)]</label>
                                     <property name="Play">$INFO[Window.Property(RecommendedEpisode.4.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.4.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.4.File)) + !Skin.HasSetting(HideHomeOngoing)</visible>
+                                </item>
+                                <item id="5">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</icon>
+                                    <label>$INFO[Window.Property(RecentEpisode.5.Season),,x]$INFO[Window.Property(RecentEpisode.5.Episode),, ]$INFO[Window.Property(RecentEpisode.5.Title)]</label>
+                                    <property name="Play">$INFO[Window.Property(RecentEpisode.5.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentEpisode.5.File)) + Skin.HasSetting(HideHomeOngoing)</visible>
                                 </item>
                                 <item id="5">
                                     <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
                                     <label>$INFO[Window.Property(RecommendedEpisode.5.Season),,x]$INFO[Window.Property(RecommendedEpisode.5.Episode),, ]$INFO[Window.Property(RecommendedEpisode.5.Title)]</label>
                                     <property name="Play">$INFO[Window.Property(RecommendedEpisode.5.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.5.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.5.File)) + !Skin.HasSetting(HideHomeOngoing)</visible>
+                                </item>
+                                <item id="6">
+                                    <onclick>-</onclick>
+                                    <icon>$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</icon>
+                                    <label>$INFO[Window.Property(RecentEpisode.6.Season),,x]$INFO[Window.Property(RecentEpisode.6.Episode),, ]$INFO[Window.Property(RecentEpisode.6.Title)]</label>
+                                    <property name="Play">$INFO[Window.Property(RecentEpisode.6.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentEpisode.6.File)) + Skin.HasSetting(HideHomeOngoing)</visible>
                                 </item>
                                 <item id="6">
                                     <onclick>-</onclick>
                                     <icon>$INFO[Window.Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
                                     <label>$INFO[Window.Property(RecommendedEpisode.6.Season),,x]$INFO[Window.Property(RecommendedEpisode.6.Episode),, ]$INFO[Window.Property(RecommendedEpisode.6.Title)]</label>
                                     <property name="Play">$INFO[Window.Property(RecommendedEpisode.6.Play)]</property>
-                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.6.File))</visible>
+                                    <visible>!IsEmpty(Window.Property(RecommendedEpisode.6.File)) + !Skin.HasSetting(HideHomeOngoing)</visible>
                                 </item>
                             </content>
                         </control>

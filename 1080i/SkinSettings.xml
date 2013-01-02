@@ -334,6 +334,24 @@
                     <onclick>Skin.ToggleSetting(HideHomeProfileInfo)</onclick>
                     <label>$LOCALIZE[41134]</label>
                 </control>
+				<control type="radiobutton" id="2003">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeSpotlight)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeSpotlight)</onclick>
+                    <label>Show New movies instead of Spotlight</label>
+                    <enable>!Skin.HasSetting(HomeHome)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2003)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2004">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeOngoing)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeOngoing)</onclick>
+                    <label>Show New shows instead of Ongoing</label>
+                    <enable>!Skin.HasSetting(HomeHome)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2004)">Conditional</animation>
+                </control>
                 <control type="group" id="2007">
                     <description>Fake spin control</description>
                     <width>1210</width>
@@ -361,7 +379,7 @@
                         <height>60</height>
                         <onleft>20072</onleft>
                         <onright>20072</onright>
-                        <onup>2002</onup>
+                        <onup>2004</onup>
                         <ondown>4001</ondown>
                         <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
@@ -403,7 +421,7 @@
                         <height>60</height>
                         <onleft>20071</onleft>
                         <onright>20071</onright>
-                        <onup>2002</onup>
+                        <onup>2004</onup>
                         <ondown>4001</ondown>
                         <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
