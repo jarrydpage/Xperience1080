@@ -76,7 +76,12 @@
 <!-- ========= -->  
 <!-- Variables -->
 <!-- ========= -->
-    
+    <variable name="videosource">
+		<value condition="[substring(ListItem.filename,hdtv) | substring(ListItem.filename,sdtv) | substring(ListItem.filename,pdtv) | substring(ListItem.filename,web-dl)]">flags/defs/tv.png</value>
+		<value condition="[substring(ListItem.filename,bluray)] + [substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]">flags/defs/bluray.png</value>
+		<value condition="[substring(ListItem.filename,hddvd) | substring(ListItem.filename,hd-dvd)] + [substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]">flags/defs/hddvd.png</value>
+	</variable>
+
     <!-- HD/SD flag -->
     <variable name="ListHDSDFlag">
         <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd.png</value>
@@ -524,9 +529,18 @@
         <value>$INFO[ListItem.Artist]</value>
     </variable>
     
+	<variable name="TextResolution">
+	<!--
+		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,flags/VideoResolution/,.png]</value>
+		<value>$INFO[ListItem.VideoResolution,flags/VideoResolution/,.png]</value>
+	-->
+		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,,p]</value>
+		<value>$INFO[ListItem.VideoResolution,,p]</value>
+	</variable>
+
     <variable name="VideoPanelThumbInfo">
-        <value condition="Container.Content(movies) + IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,] • HD</value>
-        <value condition="Container.Content(movies) + !IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,] • SD</value>
+        <value condition="Container.Content(movies) + IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,] • HD $VAR[TextResolution]</value>
+        <value condition="Container.Content(movies) + !IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,] • SD $VAR[TextResolution]</value>
         <value>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</value>
     </variable>
     

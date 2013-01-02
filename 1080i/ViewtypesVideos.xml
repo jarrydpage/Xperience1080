@@ -389,6 +389,16 @@
                         <textcolor>99FFFFFF</textcolor>
                         <scroll>false</scroll>
                     </control>
+					<control type="image">
+						<description>Video source</description>
+						<posx>1146</posx>
+						<posy>34</posy>
+						<width>66</width>
+						<height>32</height>
+						<texture>$VAR[videosource]</texture>
+						<colordiffuse>7FFFFFFF</colordiffuse>
+						<visible>!IsEmpty(ListItem.filename)</visible>
+					</control>
                     <control type="image">
                         <description>HD/SD flag</description>
                         <posx>1176</posx>
@@ -844,6 +854,16 @@
                             <textcolor>D4FFFFFF</textcolor>
                             <scroll>false</scroll>
                         </control>
+						<control type="image">
+							<description>Video source</description>
+							<posx>1146</posx>
+							<posy>34</posy>
+							<width>66</width>
+							<height>32</height>
+							<texture>$VAR[videosource]</texture>
+							<colordiffuse>7FFFFFFF</colordiffuse>
+							<visible>!IsEmpty(ListItem.filename)</visible>
+						</control>
                         <control type="image">
                             <description>HD/SD flag</description>
                             <posx>1176</posx>
