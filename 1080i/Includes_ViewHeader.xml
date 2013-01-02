@@ -249,18 +249,18 @@
                     <itemgap>0</itemgap>
                     <control type="label">
                         <width min="0" max="500">auto</width>
-                        <height>120</height>
+                        <height>125</height>
                         <label>$VAR[VideoHeaderLabel]</label>
-                        <font>Font-Condensed-S36-B</font>
+                        <font>Font-Condensed-S45-B</font>
                         <textcolor>C0FFFFFF</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
                     <control type="label">
                         <width min="0" max="500">auto</width>
-                        <height>120</height>
+                        <height>125</height>
                         <label>$INFO[Container.FolderName,: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
+                        <font>Font-Condensed-S40-B</font>
                         <textcolor>aawhite</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -268,9 +268,23 @@
                     </control>
                     <control type="label">
                         <width min="0" max="500">auto</width>
-                        <height>120</height>
-                        <label>$INFO[Container.ListItem.TVShowTitle,: ,]$INFO[Container.ListItem.Season, (,)]</label>
-                        <font>Font-Condensed-S36-B</font>
+                        <height>125</height>
+                        <label>$INFO[Container.ListItem.TVShowTitle,: ,]</label>
+                        <font>Font-Condensed-S40-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                        <visible>Container.Content(episodes)</visible>
+                    </control>
+					<control type="label">
+						<width>10</width>
+						<label> </label>
+					</control>
+                    <control type="label">
+                        <width min="0" max="500">auto</width>
+                        <height>125</height>
+                        <label>$INFO[Container.ListItem.Season,Season ]</label>
+                        <font>Font-Condensed-S28</font>
                         <textcolor>aawhite</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
