@@ -1505,21 +1505,21 @@
                         <itemlayout width="289" height="289">
                             <control type="group">
                                 <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
-                                <control type="image">
-                                    <posx>19</posx>
-                                    <posy>19</posy>
-                                    <width>293</width>
-                                    <height>293</height>
-                                    <texture border="7">windows/home/tile.png</texture>
-                                </control>
-                                <control type="image">
-                                    <posx>24</posx>
-                                    <posy>241</posy>
-                                    <width>283</width>
-                                    <height>66</height>
-                                    <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
-                                </control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">windows/home/tile-orange.png</texture>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<texture border="1">windows/home/tile-overlay.png</texture>
+									<colordiffuse>99FFFFFF</colordiffuse>
+								</control>
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
@@ -1566,20 +1566,20 @@
                                         <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
                                     <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <posx>24</posx>
-                                        <posy>241</posy>
-                                        <width>283</width>
-                                        <height>66</height>
-                                        <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">windows/home/tile-orange.png</texture>
+									</control>
+									<control type="image">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<texture border="1">windows/home/tile-overlay.png</texture>
+										<colordiffuse>99FFFFFF</colordiffuse>
+									</control>
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -2099,12 +2099,20 @@
                         <itemlayout width="289" height="289">
                             <control type="group">
                                 <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
-                                <control type="image">
+								<control type="image">
                                     <posx>19</posx>
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-blue.png</texture>
+                                </control>
+                                <control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay.png</texture>
+                                    <colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
@@ -2173,12 +2181,20 @@
                                         <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
                                     <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile.png</texture>
-                                    </control>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">windows/home/tile-blue.png</texture>
+									</control>
+									<control type="image">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<texture border="1">windows/home/tile-overlay.png</texture>
+										<colordiffuse>99FFFFFF</colordiffuse>
+									</control>
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -2778,16 +2794,22 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-green.png</texture>
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
-                                    <posy>24</posy>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay.png</texture>
+                                    <colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
                                     <width>283</width>
                                     <height>283</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>scale</aspectratio>
-                                    <visible>!IsEmpty(ListItem.Property(Path))</visible>
+                                    <texture>$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
@@ -2846,13 +2868,21 @@
                                     <animation type="Unfocus">
                                         <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
-                                    <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile.png</texture>
-                                    </control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">windows/home/tile-green.png</texture>
+									</control>
+									<control type="image">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<texture border="1">windows/home/tile-overlay.png</texture>
+										<colordiffuse>99FFFFFF</colordiffuse>
+									</control>
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
