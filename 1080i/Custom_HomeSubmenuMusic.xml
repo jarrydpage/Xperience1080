@@ -152,6 +152,7 @@
                 </item>
                 <item id="9">           
                     <label>-</label>
+					<onclick>CleanLibrary(music)</onclick>
                     <onclick condition="!Library.IsScanningMusic">UpdateLibrary(music)</onclick>
                 </item>
             </content>

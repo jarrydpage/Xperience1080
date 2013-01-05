@@ -140,6 +140,7 @@
                 </item>
                 <item id="8">           
                     <label>-</label>
+					<onclick>CleanLibrary(video)</onclick>
                     <onclick condition="!Library.IsScanningVideo">UpdateLibrary(video)</onclick>
                 </item>
             </content>
