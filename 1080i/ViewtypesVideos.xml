@@ -4165,7 +4165,7 @@
                 </control>
                 <control type="panel" id="501">
                     <posx>88</posx>
-                    <posy>174</posy>
+                    <posy>134</posy>
                     <include condition="!Skin.HasSetting(ThumbnailHidePanel)">VideoThumbsWidth1</include>
                     <include condition="Skin.HasSetting(ThumbnailHidePanel)">VideoThumbsWidth2</include>
                     <height>744</height>
@@ -4400,7 +4400,7 @@
                     <control type="image">
                         <description>Scrollbar background (visible on focus)</description>
                         <posx>75</posx>
-                        <posy>186</posy>
+                        <posy>146</posy>
                         <width>6</width>
                         <height>720</height>
                         <texture border="1">views/other/scrollbar-sq.png</texture>
@@ -4411,7 +4411,7 @@
                     <control type="scrollbar" id="70">
                         <description>Scrollbar</description>
                         <posx>75</posx>
-                        <posy>186</posy>
+                        <posy>146</posy>
                         <width>6</width>
                         <height>720</height>
                         <onright>501</onright>
@@ -4432,7 +4432,7 @@
                 <control type="image">
                     <description>Poster</description>
                     <posx>1304</posx>
-                    <posy>186</posy>
+                    <posy>146</posy>
                     <width>480</width>
                     <height>720</height>
                     <texture background="true">$VAR[PosterViewPoster]</texture>
@@ -4443,7 +4443,7 @@
                 <control type="image">
                     <description>Poster</description>
                     <posx>1304</posx>
-                    <posy>186</posy>
+                    <posy>146</posy>
                     <width>480</width>
                     <height>720</height>
                     <fadetime>500</fadetime>
@@ -4453,7 +4453,7 @@
                 </control>
                 <control type="group">
                     <posx>1304</posx>
-                    <posy>186</posy>
+                    <posy>146</posy>
                     <control type="group">
                         <visible>!IsEmpty(Container(501).ListItem.Plot) + Skin.HasSetting(ThumbnailPlot)</visible>
                         <include>visiblehidefadeinfo</include>
@@ -4498,9 +4498,10 @@
                         <height>820</height>
                         <texture>views/list/other/fanart-overlay.png</texture>
                     </control>
-                    <control type="label">
+                    <!--
+					<control type="label">
                         <posx>25</posx>
-                        <posy>575</posy>
+                        <posy>545</posy>
                         <width>430</width>
                         <font>Font-Condensed-S45</font>
                         <label>$INFO[ListItem.Label]</label>
@@ -4512,7 +4513,7 @@
                     </control>
                     <control type="label">
                         <posx>25</posx>
-                        <posy>623</posy>
+                        <posy>593</posy>
                         <width>430</width>
                         <font>Font-Condensed-S30</font>
                         <label>$INFO[ListItem.Genre]</label>
@@ -4522,7 +4523,7 @@
                     </control>
                     <control type="label">
                         <posx>25</posx>
-                        <posy>663</posy>
+                        <posy>633</posy>
                         <width>430</width>
                         <font>Font-Condensed-S30</font>
                         <label>$VAR[VideoPanelThumbInfo]</label>
@@ -4530,6 +4531,7 @@
                         <shadowcolor>22000000</shadowcolor>
                         <scroll>false</scroll>
                     </control>
+					-->
                     <control type="image">
                         <posx>380</posx>
                         <posy>0</posy>
@@ -4541,6 +4543,44 @@
                     </control>
                 </control>
             </control>
+			<control type="group">
+				<posx>126</posx>
+				<posy>880</posy>
+				<width>1660</width>
+				<visible>Control.IsVisible(501) + !Window.IsActive(movieinformation)</visible>
+
+				<control type="label">
+					<posx>0</posx>
+					<posy>-5</posy>
+					<width>350</width>
+					<align>left</align>
+					<scrollsuffix> / </scrollsuffix>
+					<font>Font-Condensed-S25-B</font>
+					<label>$INFO[ListItem.Genre]</label>
+					<textcolor>bbwhite</textcolor>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>350</width>
+					<align>left</align>
+					<font>Font-Condensed-S20-B</font>
+					<scrollsuffix> / </scrollsuffix>
+					<label>$VAR[VideoPanelThumbInfo]</label>
+					<textcolor>80FFFFFF</textcolor>
+				</control>
+				<control type="label">
+					<posx>0r</posx>
+					<posy>10</posy>
+					<width>1500</width>
+					<align>right</align>
+					<scroll>false</scroll>
+					<font>Font-Condensed-S55-B</font>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>22000000</shadowcolor>
+				</control>
+			</control>
         </control>
     </include>
 

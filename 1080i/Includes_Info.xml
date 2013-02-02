@@ -50,19 +50,33 @@
                     <visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
                     <include>visiblehidefadeinfo</include>
                 </control>
-                <control type="label">
-                    <description>Clock label</description>
-                    <posx>160r</posx>
-                    <posy>950</posy>
-                    <width>300</width>
-                    <height>100</height>
-                    <label>$INFO[System.Date], [B]$INFO[System.Time][/B]</label>
-                    <font>Font-Condensed-S34-B</font>
-                    <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
-                    <align>right</align>
-                    <scroll>false</scroll>
+                <control type="group">
                     <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
+                    <control type="label">
+                        <description>Clock label</description>
+                        <posx>160r</posx>
+                        <posy>930</posy>
+                        <width>180</width>
+                        <height>100</height>
+                        <label>[B]$INFO[System.Time][/B]</label>
+                        <font>Font-Condensed-S34-B</font>
+                        <textcolor>eewhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                        <align>right</align>
+                        <scroll>false</scroll>
+                    </control>
+                    <control type="label">
+                        <description>Date label</description>
+                        <posx>160r</posx>
+                        <posy>960</posy>
+                        <width>680</width>
+                        <height>100</height>
+                        <label>$INFO[System.Date]</label>
+                        <font>Font-Condensed-S28</font>
+                        <textcolor>80FFFFFF</textcolor>
+                        <scroll>false</scroll>
+                        <align>right</align>
+                    </control>
                 </control>
             </control>
             <control type="group">

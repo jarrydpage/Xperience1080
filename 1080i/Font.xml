@@ -196,6 +196,12 @@
             <size>75</size>
         </font>
         <font>
+            <name>Font-Condensed-S55-B</name>
+            <filename>XPCondensed.ttf</filename>
+            <size>55</size>
+            <style>bold</style>
+        </font>
+        <font>
             <name>Font-Condensed-S80-B</name>
             <filename>XPCondensed.ttf</filename>
             <size>80</size>
