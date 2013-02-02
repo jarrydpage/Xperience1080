@@ -537,13 +537,13 @@
 		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,flags/VideoResolution/,.png]</value>
 		<value>$INFO[ListItem.VideoResolution,flags/VideoResolution/,.png]</value>
 	-->
-		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,,p]$VAR[VideoFormat, ,]</value>
-		<value>$INFO[ListItem.VideoResolution,,p]$VAR[VideoFormat, ,]</value>
+		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,,p]</value>
+		<value>$INFO[ListItem.VideoResolution,,p]</value>
 	</variable>
 
     <variable name="VideoPanelThumbInfo">
-        <value condition="Container.Content(movies) + IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, / , $LOCALIZE[12391]]$INFO[ListItem.Rating, / ,]$VAR[TextResolution, / ,]</value>
-        <value condition="Container.Content(movies) + !IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, / , $LOCALIZE[12391]]$INFO[ListItem.Rating, / ,]$VAR[TextResolution, / ,]</value>
+        <value condition="Container.Content(movies) + IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, / , $LOCALIZE[12391]]$INFO[ListItem.Rating, / ,]$VAR[VideoFormat, / ,]$VAR[TextResolution, / ,]</value>
+        <value condition="Container.Content(movies) + !IntegerGreaterThan(ListItem.VideoResolution,719)">$INFO[ListItem.Year]$INFO[ListItem.Duration, / , $LOCALIZE[12391]]$INFO[ListItem.Rating, / ,]$VAR[VideoFormat, / ,]$VAR[TextResolution, / ,]</value>
         <value>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</value>
     </variable>
     
