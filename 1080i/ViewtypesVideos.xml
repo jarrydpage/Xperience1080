@@ -389,16 +389,6 @@
                         <textcolor>99FFFFFF</textcolor>
                         <scroll>false</scroll>
                     </control>
-					<control type="image">
-						<description>Video source</description>
-						<posx>1146</posx>
-						<posy>34</posy>
-						<width>66</width>
-						<height>32</height>
-						<texture>$VAR[videosource]</texture>
-						<colordiffuse>7FFFFFFF</colordiffuse>
-						<visible>!IsEmpty(ListItem.filename)</visible>
-					</control>
                     <control type="image">
                         <description>HD/SD flag</description>
                         <posx>1176</posx>
@@ -854,16 +844,6 @@
                             <textcolor>D4FFFFFF</textcolor>
                             <scroll>false</scroll>
                         </control>
-						<control type="image">
-							<description>Video source</description>
-							<posx>1146</posx>
-							<posy>34</posy>
-							<width>66</width>
-							<height>32</height>
-							<texture>$VAR[videosource]</texture>
-							<colordiffuse>7FFFFFFF</colordiffuse>
-							<visible>!IsEmpty(ListItem.filename)</visible>
-						</control>
                         <control type="image">
                             <description>HD/SD flag</description>
                             <posx>1176</posx>
@@ -1978,7 +1958,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>440</width>
+                                <width>420</width>
                                 <label>$INFO[Container(54).ListItem(-1).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2049,12 +2029,11 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>0</posy>
+                            <posy>270</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay-1]</texture>
-                            <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(54).ListItemNoWrap(-1).Label)</visible>
                     </control>
@@ -2106,7 +2085,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>440</width>
+                                <width>420</width>
                                 <label>$INFO[Container(54).ListItem(3).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2177,12 +2156,11 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>0</posy>
+                            <posy>270</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay3]</texture>
-                            <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(54).ListItemNoWrap(3).Label)</visible>
                     </control>
@@ -2234,7 +2212,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>440</width>
+                                <width>420</width>
                                 <label>$INFO[Container(54).ListItem(2).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2305,12 +2283,11 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>0</posy>
+                            <posy>270</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay2]</texture>
-                            <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(54).ListItemNoWrap(2).Label)</visible>
                     </control>
@@ -2362,7 +2339,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>440</width>
+                                <width>420</width>
                                 <label>$INFO[Container(54).ListItem(1).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2433,12 +2410,11 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>0</posy>
+                            <posy>270</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay1]</texture>
-                            <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(54).ListItemNoWrap(1).Label)</visible>
                     </control>
@@ -2486,7 +2462,7 @@
                     <control type="label">
                         <posx>20</posx>
                         <posy>288</posy>
-                        <width>440</width>
+                        <width>420</width>
                         <label>$INFO[Container(54).ListItem(0).Label]</label>
                         <font>Font-Condensed-S34-B</font>
                         <textcolor>ddwhite</textcolor>
@@ -2556,12 +2532,11 @@
                     </control>
                     <control type="image">
                         <posx>380</posx>
-                        <posy>0</posy>
+                        <posy>270</posy>
                         <width>100</width>
                         <height>100</height>
                         <aspect>keepaspect</aspect>
                         <texture>$VAR[ExtendedOverlay0]</texture>
-                        <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                     </control>
                 </control>
             </control>
@@ -2622,7 +2597,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>440</width>
+                                <width>420</width>
                                 <label>$INFO[ListItem.Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2684,12 +2659,11 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>0</posy>
+                            <posy>270</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay]</texture>
-                            <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                         </control>
                         <control type="image">
                             <posx>0</posx>
@@ -2741,7 +2715,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>440</width>
+                                <width>420</width>
                                 <label>$INFO[ListItem.Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2803,12 +2777,11 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>0</posy>
+                            <posy>270</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay]</texture>
-                            <animation effect="slide" end="0,270" time="0" condition="[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">Conditional</animation>
                         </control>
                         <control type="image">
                             <posx>0</posx>
@@ -3494,7 +3467,7 @@
                 <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
                 <animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>       
                 <control type="fixedlist" id="55">
-                    <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)</visible>
+                    <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     <posx>-174</posx>
                     <posy>250</posy>
                     <width>2200</width>
@@ -3685,7 +3658,7 @@
                         <posx>110</posx>
                         <posy>830</posy>
                         <control type="group">
-                            <visible>Container.Content(movies) | Container.Content(Sets)</visible>
+                            <visible>Container.Content(movies) | Container.Content(Sets) | Container.HasFolders</visible>
                             <control type="label">
                                 <posx>85</posx>
                                 <posy>15</posy>
@@ -4141,6 +4114,12 @@
 <!-- =============== -->
 <!-- Thumbnail (501) -->
 <!-- =============== -->
+    <include name="VideoThumbsWidth1">
+        <width>1252</width>
+    </include>
+    <include name="VideoThumbsWidth2">
+        <width>1752</width>
+    </include>  
     <include name="Viewtype-ThumbnailVideo">
         <control type="group">
             <include>FullscreenDimensions</include>
@@ -4160,7 +4139,8 @@
                 <control type="panel" id="501">
                     <posx>88</posx>
                     <posy>174</posy>
-                    <width>1252</width>
+                    <include condition="!Skin.HasSetting(ThumbnailHidePanel)">VideoThumbsWidth1</include>
+                    <include condition="Skin.HasSetting(ThumbnailHidePanel)">VideoThumbsWidth2</include>
                     <height>744</height>
                     <pagecontrol>70</pagecontrol>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -4172,7 +4152,7 @@
                     <onup>501</onup>
                     <ondown>501</ondown>
                     <preloaditems>2</preloaditems>
-                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)</visible>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     <animation effect="slide" end="35" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(ThumbnailVideoSmall)">Conditional</animation>
                     <itemlayout width="167" height="244" condition="Skin.HasSetting(ThumbnailVideoSmall)">
                         <control type="image">
@@ -4420,7 +4400,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>Control.IsVisible(501) + !Window.IsActive(movieinformation)</visible>
+                <visible>Control.IsVisible(501) + !Skin.HasSetting(ThumbnailHidePanel) + !Window.IsActive(movieinformation)</visible>
                 <include>ThumbnailAnimationsPoster</include>
                 <control type="image">
                     <description>Poster</description>
