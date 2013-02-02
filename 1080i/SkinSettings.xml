@@ -500,12 +500,19 @@
                     <onclick>Skin.ToggleSetting(HideFanart)</onclick>
                     <label>$LOCALIZE[41191]</label>
                 </control>
-                <control type="radiobutton" id="3003">
+                <control type="radiobutton" id="3002">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(MovieInformation.PlayTrailer)</selected>
                     <onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
                     <label>$LOCALIZE[41202]</label>
+                </control>
+                <control type="radiobutton" id="3003">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(PlayTrailer.Minimized)</selected>
+                    <onclick>Skin.ToggleSetting(PlayTrailer.Minimized)</onclick>
+                    <label>$LOCALIZE[41203]</label>
                 </control>
             </control>
             
@@ -823,27 +830,6 @@
                     <onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
                     <label>$LOCALIZE[41294]</label>
                     <visible>System.HasAddon(script.artwork.downloader)</visible>
-                </control>
-                <control type="radiobutton" id="7011">
-                    <width>1210</width>
-                    <include>SettingsCategoryRadioButtonVars</include>
-                    <selected>Skin.HasSetting(ExtraFanart.Enabled)</selected>
-                    <onclick>Skin.ToggleSetting(ExtraFanart.Enabled)</onclick>
-                    <label>$LOCALIZE[41287]</label>
-                </control>
-                <control type="button" id="7012">
-                    <width>1210</width>
-                    <include>SettingsCategoryDefaultButtonVars</include>
-                    <onclick>Addon.OpenSettings(script.artwork.downloader)</onclick>
-                    <label> • $LOCALIZE[41289]</label>
-                    <visible>Skin.HasSetting(ExtraFanart.Enabled)</visible>
-                </control>
-                <control type="button" id="7013">
-                    <width>1210</width>
-                    <include>SettingsCategoryDefaultButtonVars</include>
-                    <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,extrafanart)</onclick>
-                    <label> • $LOCALIZE[41288]</label>
-                    <visible>Skin.HasSetting(ExtraFanart.Enabled)</visible>
                 </control>
             </control>
             
