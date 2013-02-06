@@ -89,7 +89,7 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                        <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                         <visible>Container.Content(genres)</visible>
                     </control>
                     <control type="image">
@@ -464,7 +464,7 @@
                         <posy>5</posy>
                         <width>60</width>
                         <height>90</height>
-                        <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                        <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                         <visible>Container.Content(genres)</visible>
                     </control>
                     <control type="image">
@@ -1790,7 +1790,7 @@
                         <posy>-3</posy>
                         <width>742</width>
                         <height>604</height>
-                        <texture background="true">views/list/panel/panel.png</texture>
+                        <texture>views/list/panel/panel.png</texture>
                         <visible>IsEmpty(Container(53).ListItem.Art(fanart)) + IsEmpty(Container(53).ListItem.Art(season.fanart))</visible>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -4200,7 +4200,7 @@
                             <posy>12</posy>
                             <width>155</width>
                             <height>232</height>
-                            <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                            <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                             <colordiffuse>eewhite</colordiffuse>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(Genres)</visible>
@@ -4234,7 +4234,7 @@
                             <posy>12</posy>
                             <width>236</width>
                             <height>354</height>
-                            <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                            <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                             <colordiffuse>eewhite</colordiffuse>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(Genres)</visible>
@@ -4269,7 +4269,7 @@
                                 <posy>12</posy>
                                 <width>155</width>
                                 <height>232</height>
-                                <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                                <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                                 <colordiffuse>eewhite</colordiffuse>
                                 <aspectratio>scale</aspectratio>
                                 <visible>Container.Content(Genres)</visible>
@@ -4308,7 +4308,7 @@
                                 <posy>12</posy>
                                 <width>155</width>
                                 <height>232</height>
-                                <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                                <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <visible>Container.Content(Genres)</visible>
                             </control>
@@ -4342,7 +4342,7 @@
                                 <posy>12</posy>
                                 <width>236</width>
                                 <height>354</height>
-                                <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                                <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                                 <colordiffuse>eewhite</colordiffuse>
                                 <aspectratio>scale</aspectratio>
                                 <visible>Container.Content(Genres)</visible>
@@ -4381,7 +4381,7 @@
                                 <posy>12</posy>
                                 <width>236</width>
                                 <height>354</height>
-                                <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                                <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <visible>Container.Content(Genres)</visible>
                             </control>
@@ -4447,7 +4447,7 @@
                     <width>480</width>
                     <height>720</height>
                     <fadetime>500</fadetime>
-                    <texture fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
+                    <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
                     <aspectratio>scale</aspectratio>
                     <visible>Container.Content(Genres)</visible>
                 </control>
