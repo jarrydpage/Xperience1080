@@ -1847,24 +1847,6 @@
                                 <texture>$VAR[InfoPanelOverlay]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
-                        <!--</control>
-                        <control type="group">
-                            <animation type="Focus" reversible="false">
-                                <effect type="zoom" start="80" end="100" time="300" tween="back" easing="out" center="auto" />
-                            </animation>
-                            <animation type="UnFocus" condition="!Container(53).OnNext + !Container(53).OnPrevious" reversible="false">
-                                <effect type="zoom" start="100" end="86.67" time="250" tween="back" easing="in" center="auto" />
-                                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                            </animation>
-                            <control type="image">
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>128</width>
-                                <height>192</height>
-                                <aspectratio scalediffuse="false">scale</aspectratio>
-                                <bordertexture border="1">windows/common/darkgrey.png</bordertexture>
-                                <texture background="true">$VAR[WallPoster]</texture>
-                            </control>-->
                             <control type="image">
                                 <posx>0</posx>
                                 <posy>0</posy>
@@ -4122,55 +4104,9 @@
                     </itemlayout>
                     <focusedlayout width="344" height="344" condition="!Skin.HasSetting(ThumbnailSmall)">
                         <control type="group">
-                            <!--<visible>!Control.HasFocus(500)</visible>
-                            <control type="image">
-                                <description>Poster Back</description>
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>332</width>
-                                <height>332</height>
-                                <texture border="1">windows/common/black.png</texture>
-                            </control>
-                            <control type="image">
-                                <description>Poster</description>
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>332</width>
-                                <height>332</height>
-                                <texture background="true">$VAR[ThumbIcon]</texture>
-                                <colordiffuse>eewhite</colordiffuse>
-                                <aspectratio>keep</aspectratio>
-                            </control>
-                            <control type="image">
-                                <posx>12</posx>
-                                <posy>278</posy>
-                                <width>332</width>
-                                <height>66</height>
-                                <texture border="1">windows/common/black.png</texture>
-                                <colordiffuse>DFFFFFFF</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <posx>27</posx>
-                                <posy>278</posy>
-                                <width>292</width>
-                                <height>66</height>
-                                <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32</font>
-                                <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
-                                <scroll>false</scroll>
-                                <align>left</align>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <animation type="Focus" reversible="false">
-                                <effect type="zoom" start="80" end="100" time="300" tween="back" easing="out" center="auto" />-->
 							<animation type="Focus">
 								<effect type="fade" start="93.36" end="100" time="200" tween="sine" easing="in" />
                             </animation>
-                            <!--<animation type="UnFocus" condition="!Container(500).OnNext + !Container(500).OnPrevious" reversible="false">
-                                <effect type="zoom" start="100" end="86.67" time="250" tween="back" easing="in" center="auto" />
-                                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />-->
 							<animation type="Unfocus">
 								<effect type="fade" start="100" end="93.36" time="200" tween="sine" easing="out" />
                             </animation>
@@ -4246,55 +4182,9 @@
                     </focusedlayout>
                     <focusedlayout width="229" height="230" condition="Skin.HasSetting(ThumbnailSmall)">
                         <control type="group">
-                            <!--<visible>!Control.HasFocus(500)</visible>
-                            <control type="image">
-                                <description>Poster Back</description>
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>217</width>
-                                <height>217</height>
-                                <texture border="1">windows/common/black.png</texture>
-                            </control>
-                            <control type="image">
-                                <description>Poster</description>
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>217</width>
-                                <height>217</height>
-                                <texture background="true">$VAR[ThumbIcon]</texture>
-                                <colordiffuse>eewhite</colordiffuse>
-                                <aspectratio>keep</aspectratio>
-                            </control>
-                            <control type="image">
-                                <posx>12</posx>
-                                <posy>179</posy>
-                                <width>217</width>
-                                <height>50</height>
-                                <texture border="1">windows/common/black.png</texture>
-                                <colordiffuse>DFFFFFFF</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <posx>27</posx>
-                                <posy>179</posy>
-                                <width>177</width>
-                                <height>50</height>
-                                <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S25</font>
-                                <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
-                                <scroll>false</scroll>
-                                <align>left</align>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <animation type="Focus" reversible="false">
-                                <effect type="zoom" start="80" end="100" time="300" tween="back" easing="out" center="auto" />-->
 							<animation type="Focus">
 								<effect type="fade" start="93.36" end="100" time="200" tween="sine" easing="in" />
                             </animation>
-                            <!--<animation type="UnFocus" condition="!Container(500).OnNext + !Container(500).OnPrevious" reversible="false">
-                                <effect type="zoom" start="100" end="86.67" time="250" tween="back" easing="in" center="auto" />
-                                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />-->
 							<animation type="Unfocus">
 								<effect type="fade" start="100" end="93.36" time="200" tween="sine" easing="out" />
                             </animation>
@@ -4579,35 +4469,6 @@
                                 <texture>$VAR[ExtendedOverlay]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
-                        <!--</control>
-                        <control type="group">
-                            <animation type="Focus" reversible="false">
-                                <effect type="zoom" start="80" end="100" time="300" tween="back" easing="out" center="auto" />
-                            </animation>
-                            <animation type="UnFocus" condition="!Container(501).OnNext + !Container(501).OnPrevious" reversible="false">
-                                <effect type="zoom" start="100" end="86.67" time="250" tween="back" easing="in" center="auto" />
-                                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                            </animation>
-                            <control type="image">
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>155</width>
-                                <height>232</height>
-                                <bordertexture border="1">windows/common/darkgrey.png</bordertexture>
-                                <aspectratio scalediffuse="false">scale</aspectratio>
-                                <texture background="true">$VAR[WallPoster]</texture>
-                                <visible>!Container.Content(Genres)</visible>
-                            </control>
-                            <control type="image">
-                                <description>Poster</description>
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>155</width>
-                                <height>232</height>
-                                <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
-                                <aspectratio scalediffuse="false">scale</aspectratio>
-                                <visible>Container.Content(Genres)</visible>
-                            </control>-->
                             <control type="image">
                                 <posx>0</posx>
                                 <posy>0</posy>
@@ -4627,7 +4488,6 @@
                     </focusedlayout>
                     <focusedlayout width="248" height="366" condition="!Skin.HasSetting(ThumbnailVideoSmall)">
                         <control type="group">
-                            <!--<visible>!Control.HasFocus(501)</visible>-->
 							<animation type="Focus">
 								<effect type="fade" start="93.36" end="100" time="200" tween="sine" easing="in" />
 							</animation>
@@ -4664,35 +4524,6 @@
                                 <texture>$VAR[ExtendedOverlay]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
-                        <!--</control>
-                        <control type="group">
-                            <animation type="Focus" reversible="false">
-                                <effect type="zoom" start="80" end="100" time="300" tween="back" easing="out" center="auto" />
-                            </animation>
-                            <animation type="UnFocus" condition="!Container(501).OnNext + !Container(501).OnPrevious" reversible="false">
-                                <effect type="zoom" start="100" end="86.67" time="250" tween="back" easing="in" center="auto" />
-                                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                            </animation>
-                            <control type="image">
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>236</width>
-                                <height>354</height>
-                                <bordertexture border="1">windows/common/darkgrey.png</bordertexture>
-                                <aspectratio scalediffuse="false">scale</aspectratio>
-                                <texture background="true">$VAR[WallPoster]</texture>
-                                <visible>!Container.Content(Genres)</visible>
-                            </control>
-                            <control type="image">
-                                <description>Poster</description>
-                                <posx>12</posx>
-                                <posy>12</posy>
-                                <width>236</width>
-                                <height>354</height>
-                                <texture background="true" fallback="moviegenres/Default.jpg">$INFO[ListItem.Label,moviegenres/,.jpg]</texture>
-                                <aspectratio scalediffuse="false">scale</aspectratio>
-                                <visible>Container.Content(Genres)</visible>
-                            </control>-->
                             <control type="image">
                                 <posx>0</posx>
                                 <posy>0</posy>
@@ -4814,40 +4645,6 @@
                         <height>820</height>
                         <texture>views/list/other/fanart-overlay.png</texture>
                     </control>
-                    <!--
-					<control type="label">
-                        <posx>25</posx>
-                        <posy>545</posy>
-                        <width>430</width>
-                        <font>Font-Condensed-S45</font>
-                        <label>$INFO[ListItem.Label]</label>
-                        <textcolor>bbwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
-                        <scroll>false</scroll>
-                        <animation effect="slide" end="0,40" time="0" condition="IsEmpty(Container(501).ListItem.Genre)">Conditional</animation>
-                        <animation effect="slide" end="0,40" time="0" condition="Container.Content(Genres) | Container.Content(Actors)">Conditional</animation>
-                    </control>
-                    <control type="label">
-                        <posx>25</posx>
-                        <posy>593</posy>
-                        <width>430</width>
-                        <font>Font-Condensed-S30</font>
-                        <label>$INFO[ListItem.Genre]</label>
-                        <textcolor>77white</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
-                        <scroll>false</scroll>
-                    </control>
-                    <control type="label">
-                        <posx>25</posx>
-                        <posy>633</posy>
-                        <width>430</width>
-                        <font>Font-Condensed-S30</font>
-                        <label>$VAR[VideoPanelThumbInfo]</label>
-                        <textcolor>77white</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
-                        <scroll>false</scroll>
-                    </control>
-					-->
                     <control type="image">
                         <posx>380</posx>
                         <posy>0</posy>

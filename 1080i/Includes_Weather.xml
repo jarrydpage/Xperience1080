@@ -2602,7 +2602,7 @@
                             <posy>0</posy>
                             <width>390</width>
                             <height>95</height>
-                            <font>Font-Condensed-S36</font>
+                            <font>Font-Condensed-S28</font>
                             <label>$INFO[ListItem.Property(outlook)]</label>
                             <textcolor>77white</textcolor>
                             <align>left</align>
@@ -2699,7 +2699,7 @@
                                 <posy>0</posy>
                                 <width>390</width>
                                 <height>95</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S28</font>
                                 <label>$INFO[ListItem.Property(outlook)]</label>
                                 <textcolor>aawhite</textcolor>
                                 <align>left</align>
