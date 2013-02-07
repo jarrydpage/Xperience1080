@@ -4544,7 +4544,7 @@
                 </control>
             </control>
 			<control type="group">
-				<posx>126</posx>
+				<posx>135</posx>
 				<posy>880</posy>
 				<width>1660</width>
 				<visible>Control.IsVisible(501) + !Window.IsActive(movieinformation)</visible>
