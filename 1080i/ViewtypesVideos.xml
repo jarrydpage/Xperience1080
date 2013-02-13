@@ -4701,7 +4701,7 @@
 				<control type="label">
 					<posx>0r</posx>
 					<posy>10</posy>
-					<width>1500</width>
+					<width>1300</width>
 					<align>right</align>
 					<scroll>false</scroll>
 					<font>Font-Condensed-S55-B</font>
