@@ -533,10 +533,6 @@
 		<value condition="SubString(ListItem.FilenameAndPath,bluray)">BluRay</value>
 	</variable>
 	<variable name="TextResolution">
-	<!--
-		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,flags/VideoResolution/,.png]</value>
-		<value>$INFO[ListItem.VideoResolution,flags/VideoResolution/,.png]</value>
-	-->
 		<value condition="IsEmpty(ListItem.VideoResolution)">$INFO[VideoPlayer.VideoResolution,,p]</value>
 		<value>$INFO[ListItem.VideoResolution,,p]</value>
 	</variable>
