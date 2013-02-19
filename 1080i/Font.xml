@@ -218,7 +218,7 @@
         </font>
         <font>
             <name>Font-Condensed-S55-B</name>
-            <filename>XPCondensed.ttf</filename>
+            <filename>OpenSansCond.ttf</filename>
             <size>55</size>
             <style>bold</style>
         </font>
@@ -232,6 +232,12 @@
             <name>Font-Condensed-S100</name>
             <filename>OpenSansCond.ttf</filename>
             <size>100</size>
+        </font>
+        <font>
+            <name>Font-Condensed-S72-B</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>72</size>
+            <style>bold</style>
         </font>
         
         <!-- Confluence Fonts (For Add-On Compatibility) -->
