@@ -58,14 +58,14 @@
                 <!-- Title Label -->            
                 <control type="label">
                     <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
-                    <posx>88</posx>
+                    <posx>88r</posx>
                     <posy>51</posy>
                     <width>1760</width>
                     <height>100</height>
                     <label>$INFO[ListItem.Title]</label>
                     <font>Font-Condensed-S72-B</font>
                     <textcolor>aawhite</textcolor>
-                    <align>left</align>
+                    <align>right</align>
                     <scroll>false</scroll>
                     <visible>!Container.Content(episodes) + ![Container.Content(tvshows) + !IsEmpty(listitem.mpaa)]</visible>
                 </control>
@@ -73,14 +73,14 @@
                 <!-- Title Label -->            
                 <control type="label">
                     <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
-                    <posx>88</posx>
+                    <posx>88r</posx>
                     <posy>51</posy>
                     <width>1760</width>
                     <height>100</height>
                     <label>$INFO[ListItem.TVShowTitle]</label>
                     <font>Font-Condensed-S75</font>
                     <textcolor>aawhite</textcolor>
-                    <align>left</align>
+                    <align>right</align>
                     <scroll>false</scroll>
                     <visible>Container.Content(episodes)</visible>
                 </control>

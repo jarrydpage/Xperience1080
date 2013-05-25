@@ -1050,7 +1050,7 @@
             <control type="group" id="8000">
                 <posx>626</posx>
                 <posy>776</posy>
-                <animation effect="slide"end="-217" time="0" condition="Control.IsVisible(6)">Conditional</animation>
+                <animation effect="slide" end="-217" time="0" condition="Control.IsVisible(6)">Conditional</animation>
                 <control type="button" id="5">
                     <description>Select</description>
                     <texturefocus>buttons/select-fo.png</texturefocus>
@@ -1951,10 +1951,10 @@
             </control>
             <control type="textbox" id="400">
             	<description>Plot value</description>
-            	<posx>130</posx>
-            	<posy>422</posy>
-            	<width>620</width>
-            	<height>415</height>
+            	<posx>440</posx>
+            	<posy>452</posy>
+            	<width>1030</width>
+            	<height>400</height>
             	<font>Font-Condensed-S34</font>
             	<align>justify</align>
             	<textcolor>aawhite</textcolor>
